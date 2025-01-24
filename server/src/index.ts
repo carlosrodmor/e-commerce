@@ -18,41 +18,50 @@ dotenv.config()
 // Inicialización de la app
 const app = express()
 
-// Configuración de seguridad con Helmet
-app.use(helmet())
+// 1. Primero CORS
+if (process.env.NODE_ENV === 'development') {
+  app.use(
+    cors({
+      origin: true,
+      credentials: true,
+    })
+  )
+} else {
+  app.use(
+    cors({
+      origin: process.env.CORS_ORIGIN,
+      credentials: true,
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      allowedHeaders: ['Content-Type', 'Authorization']
+    })
+  )
+}
 
-// Configuración de CORS
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGIN,
-    credentials: true
-  })
-)
+// Middleware para manejar preflight requests
+app.options('*', cors())
 
-// Rate limiting
-const limiter = rateLimit({
-  windowMs: Number(process.env.RATE_LIMIT_WINDOW_MS) || 900000, // 15 minutos por defecto
-  max: Number(process.env.RATE_LIMIT_MAX_REQUESTS) || 100 // límite de 100 solicitudes por ventana
-})
-app.use('/api/', limiter)
+// 2. Luego los middlewares básicos
+app.use(express.json())
+app.use(morgan('dev'))
 
-// Prevención de HTTP Parameter Pollution
+// 3. Middlewares de seguridad
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: "cross-origin" }
+}))
+app.use(mongoSanitize())
+app.use(xss())
 app.use(hpp())
 
-// Sanitización de datos contra NoSQL query injection
-app.use(mongoSanitize())
+// 4. Rate limiting
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutos
+  max: 100 // límite de 100 peticiones por ventana
+})
+app.use('/api', limiter)
 
-// Sanitización contra XSS
-app.use(xss())
-
-// Middlewares básicos
-app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'))
-app.use(express.json({ limit: '10kb' })) // Limitar tamaño del body
-app.use(express.urlencoded({ extended: true, limit: '10kb' }))
-
-// Rutas
-app.use('/api/products', productRoutes)
+// 5. Finalmente las rutas
 app.use('/api/auth', authRoutes)
+app.use('/api/products', productRoutes)
 app.use('/api/categories', categoryRoutes)
 
 // Manejo de rutas no encontradas
@@ -70,12 +79,9 @@ const PORT = process.env.PORT || 5000
 app.use(
   (err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
     console.error(err.stack)
-    res.status(err.status || 500).json({
+    res.status(500).json({
       status: 'error',
-      message:
-        process.env.NODE_ENV === 'development'
-          ? err.message
-          : 'Error interno del servidor'
+      message: 'Error interno del servidor'
     })
   }
 )

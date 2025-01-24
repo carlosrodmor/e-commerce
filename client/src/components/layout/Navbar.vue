@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
+import { useAuthStore } from '@/stores/auth'
 
+const router = useRouter()
+const authStore = useAuthStore()
 const isMenuOpen = ref(false)
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
+}
+
+const handleLogout = () => {
+  authStore.logout()
+  router.push('/login')
 }
 </script>
 
@@ -33,6 +41,17 @@ const toggleMenu = () => {
       </div>
 
       <div class="nav-actions">
+        <template v-if="authStore.user">
+          <span class="user-name">{{ authStore.user.name }}</span>
+          <button class="icon-button" @click="handleLogout">
+            <span class="sr-only">Cerrar sesión</span>
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </template>
+        <template v-else>
+          <RouterLink to="/login" class="nav-link">Iniciar Sesión</RouterLink>
+          <RouterLink to="/register" class="nav-link">Registrarse</RouterLink>
+        </template>
         <button class="icon-button">
           <span class="sr-only">Buscar</span>
           <i class="fas fa-search"></i>
@@ -180,6 +199,12 @@ const toggleMenu = () => {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.user-name {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  margin-right: 1rem;
 }
 
 @media (max-width: 768px) {

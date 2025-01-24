@@ -31,4 +31,4 @@ const categorySchema = new Schema<ICategory>(
   }
 )
 
-export default model<ICategory>('Category', categorySchema) 
+export default model<ICategory>('Category', categorySchema)
