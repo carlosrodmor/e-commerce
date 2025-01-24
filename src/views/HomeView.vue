@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import HeroSection from '@/components/HeroSection.vue'
-import CategorySection from '@/components/CategorySection.vue'
-import ProductSection from '@/components/ProductSection.vue'
+import HeroSection from '@/components/home/HeroSection.vue'
+import CategorySection from '@/components/home/CategorySection.vue'
+import ProductSection from '@/components/home/ProductSection.vue'
 
 const categoryImages = {
   category1: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&auto=format',
