@@ -16,7 +16,7 @@ const handleSubmit = async () => {
     await authStore.register({
       name: name.value,
       email: email.value,
-      password: password.value
+      password: password.value,
     })
     router.push('/') // Redirigir al home después del registro exitoso
   } catch (e) {

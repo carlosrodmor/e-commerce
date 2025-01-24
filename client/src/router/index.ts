@@ -8,37 +8,61 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: { public: true },
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/auth/LoginView.vue')
+      component: () => import('../views/auth/LoginView.vue'),
+      meta: { public: true },
     },
     {
       path: '/register',
       name: 'register',
-      component: () => import('../views/auth/RegisterView.vue')
+      component: () => import('../views/auth/RegisterView.vue'),
+      meta: { public: true },
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
+      meta: { public: true },
     },
-  ]
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import('../views/ShopView.vue'),
+      meta: { public: true },
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: () => import('../views/CartView.vue'),
+      meta: { requiresAuth: true },
+    },
+  ],
 })
 
 // Guardia de navegación
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore()
-  const publicPages = ['/login', '/register']
-  const authRequired = !publicPages.includes(to.path)
+  const isPublic = to.meta.public
+  const requiresAuth = to.meta.requiresAuth
+  const isAuthenticated = !!authStore.token
 
-  if (authRequired && !authStore.token) {
+  if (requiresAuth && !isAuthenticated) {
     return next('/login')
+  }
+
+  if (isAuthenticated && (to.path === '/login' || to.path === '/register')) {
+    return next('/')
   }
 
   next()

@@ -40,9 +40,9 @@ export const useAuthStore = defineStore('auth', () => {
       const response = await fetch('http://localhost:5000/api/auth/register', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       })
 
       const result = await response.json()
@@ -70,9 +70,9 @@ export const useAuthStore = defineStore('auth', () => {
       const response = await fetch('http://localhost:5000/api/auth/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       })
 
       const result = await response.json()
@@ -108,6 +108,6 @@ export const useAuthStore = defineStore('auth', () => {
     register,
     login,
     logout,
-    initializeAuth
+    initializeAuth,
   }
 })
