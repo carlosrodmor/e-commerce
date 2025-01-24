@@ -5,8 +5,11 @@ dotenv.config()
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/e-commerce'
 
+mongoose.set('debug', process.env.NODE_ENV === 'development')
+
 export const connectDB = async () => {
   try {
+    console.log('Conectando a MongoDB...')
     await mongoose.connect(MONGODB_URI, {
       autoIndex: true, // Construir índices
       maxPoolSize: 10, // Mantener hasta 10 conexiones socket
@@ -17,15 +20,17 @@ export const connectDB = async () => {
 
     // Eventos de conexión
     mongoose.connection.on('connected', () => {
-      console.log('Base de datos conectada exitosamente')
+      console.log('✅ MongoDB conectado exitosamente')
+      console.log(`🗄️  Base de datos: ${mongoose.connection.name}`)
+      console.log(`🌐 Host: ${mongoose.connection.host}`)
     })
 
     mongoose.connection.on('error', err => {
-      console.error('Error en la conexión de MongoDB:', err)
+      console.error('❌ Error en la conexión de MongoDB:', err)
     })
 
     mongoose.connection.on('disconnected', () => {
-      console.log('MongoDB desconectado')
+      console.log('🔌 MongoDB desconectado')
     })
 
     // Manejo graceful shutdown
@@ -34,7 +39,7 @@ export const connectDB = async () => {
       process.exit(0)
     })
   } catch (error) {
-    console.error('Error al conectar con la base de datos:', error)
+    console.error('❌ Error al conectar con MongoDB:', error)
     process.exit(1)
   }
 }
