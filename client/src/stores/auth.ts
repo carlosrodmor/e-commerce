@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import { api } from '@/utils/api'
 
 interface User {
   id: string
@@ -37,19 +38,10 @@ export const useAuthStore = defineStore('auth', () => {
     loading.value = true
     error.value = null
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const result = await api.fetch('/auth/register', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
         body: JSON.stringify(data),
       })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.message || 'Error en el registro')
-      }
 
       token.value = result.data.token
       user.value = result.data.user
@@ -67,19 +59,10 @@ export const useAuthStore = defineStore('auth', () => {
     loading.value = true
     error.value = null
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const result = await api.fetch('/auth/login', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
         body: JSON.stringify(data),
       })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.message || 'Error en el inicio de sesión')
-      }
 
       token.value = result.data.token
       user.value = result.data.user
