@@ -1,7 +1,8 @@
-import { Schema, model, Document } from 'mongoose'
+import { Schema, model, Document, Types } from 'mongoose'
 import bcrypt from 'bcryptjs'
 
 export interface IUser extends Document {
+  _id: Types.ObjectId
   name: string
   email: string
   password: string
@@ -51,8 +52,10 @@ userSchema.pre('save', async function (next) {
 })
 
 // Método para comparar contraseñas
-userSchema.methods.comparePassword = async function (candidatePassword: string): Promise<boolean> {
+userSchema.methods.comparePassword = async function (
+  candidatePassword: string
+): Promise<boolean> {
   return bcrypt.compare(candidatePassword, this.password)
 }
 
-export default model<IUser>('User', userSchema) 
+export default model<IUser>('User', userSchema)

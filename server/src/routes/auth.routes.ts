@@ -1,10 +1,13 @@
 import { Router } from 'express'
-import { register, login } from '../controllers/auth.controller'
+import { register, login, getMe } from '../controllers/auth.controller'
+import { protect } from '../middleware/auth.middleware'
+import { validateRegister, validateLogin } from '../middleware/validation.middleware'
 
 const router = Router()
 
-router.post('/register', register)
-router.post('/login', login)
+router.post('/register', validateRegister, register)
+router.post('/login', validateLogin, login)
+router.get('/me', protect, getMe)
 
 // TODO: Implementar rutas de autenticación
 // router.post('/register', authController.register)
