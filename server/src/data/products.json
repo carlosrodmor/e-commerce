@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Silla Minimal",
+      "description": "Silla de diseño minimalista perfecta para cualquier espacio",
+      "price": 199.99,
+      "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
+      "category": "1",
+      "stock": 10
+    },
+    {
+      "id": "2", 
+      "name": "Lámpara Nórdica",
+      "description": "Lámpara de pie con diseño escandinavo",
+      "price": 149.99,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
+      "category": "2",
+      "stock": 15
+    },
+    {
+      "id": "3",
+      "name": "Jarrón Moderno",
+      "description": "Jarrón decorativo de cerámica en tonos neutros",
+      "price": 79.99,
+      "image": "https://images.unsplash.com/photo-1581783898377-1c85bf937427",
+      "category": "3",
+      "stock": 20
+    }
+  ]
+} 
