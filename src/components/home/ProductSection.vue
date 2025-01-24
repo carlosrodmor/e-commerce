@@ -4,6 +4,7 @@ interface Product {
   name: string
   price: number
   image: string
+  description: string
 }
 
 defineProps<{
@@ -18,6 +19,7 @@ defineProps<{
       <div class="product-card" v-for="product in products" :key="product.id">
         <img :src="product.image" :alt="product.name" />
         <h3>{{ product.name }}</h3>
+        <p class="description">{{ product.description }}</p>
         <p class="price">€{{ product.price }}</p>
         <button class="add-to-cart">Añadir al Carrito</button>
       </div>
@@ -85,6 +87,13 @@ h2::after {
   color: var(--color-heading);
   margin: 1rem 0;
   font-weight: 600;
+}
+
+.description {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .price {

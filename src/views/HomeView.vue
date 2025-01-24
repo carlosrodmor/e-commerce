@@ -4,35 +4,65 @@ import CategorySection from '@/components/home/CategorySection.vue'
 import ProductSection from '@/components/home/ProductSection.vue'
 
 const categoryImages = {
-  category1: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&auto=format',
-  category2: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=500&auto=format',
-  category3: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=500&auto=format',
+  category1: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&auto=format',
+  category2: 'https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&auto=format',
+  category3: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500&auto=format',
+  category4: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500&auto=format',
 }
 
 const categories = [
-  { image: categoryImages.category1, title: 'Ropa' },
-  { image: categoryImages.category2, title: 'Accesorios' },
-  { image: categoryImages.category3, title: 'Calzado' },
+  { image: categoryImages.category1, title: 'Ropa', description: 'Diseños contemporáneos' },
+  { image: categoryImages.category2, title: 'Accesorios', description: 'Detalles únicos' },
+  { image: categoryImages.category3, title: 'Calzado', description: 'Confort y estilo' },
+  { image: categoryImages.category4, title: 'Colección', description: 'Piezas exclusivas' },
 ]
 
 const featuredProducts = [
   {
     id: 1,
-    name: 'Camisa Minimalista',
-    price: 59.99,
-    image: '@/assets/product1.jpg',
+    name: 'Blazer Minimalista',
+    price: 159.99,
+    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&auto=format',
+    description: 'Elegancia atemporal en cada detalle',
   },
   {
     id: 2,
-    name: 'Bolso Elegante',
-    price: 89.99,
-    image: '@/assets/product2.jpg',
+    name: 'Bolso Estructurado',
+    price: 129.99,
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format',
+    description: 'Diseño geométrico moderno',
   },
   {
     id: 3,
-    name: 'Zapatos Clásicos',
-    price: 129.99,
-    image: '@/assets/product3.jpg',
+    name: 'Mocasines Clásicos',
+    price: 189.99,
+    image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&auto=format',
+    description: 'Artesanía italiana refinada',
+  },
+  {
+    id: 4,
+    name: 'Vestido Midi',
+    price: 199.99,
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&auto=format',
+    description: 'Simplicidad sofisticada',
+  },
+]
+
+const features = [
+  {
+    icon: 'fa-solid fa-truck-fast',
+    title: 'Envío Gratuito',
+    description: 'En pedidos superiores a 100€',
+  },
+  {
+    icon: 'fa-solid fa-rotate-left',
+    title: 'Devolución Fácil',
+    description: '30 días de garantía',
+  },
+  {
+    icon: 'fa-solid fa-shield',
+    title: 'Compra Segura',
+    description: 'Pago 100% seguro',
   },
 ]
 </script>
@@ -40,12 +70,36 @@ const featuredProducts = [
 <template>
   <main>
     <HeroSection
-      title="Descubre el Estilo"
-      subtitle="Colección 2024: Minimalismo y Elegancia"
+      title="Elegancia Minimalista"
+      subtitle="Descubre nuestra colección 2024: donde la simplicidad encuentra la sofisticación"
       ctaText="Explorar Colección"
     />
+
+    <!-- Características -->
+    <section class="features">
+      <div class="feature-grid">
+        <div v-for="feature in features" :key="feature.title" class="feature-card">
+          <i :class="feature.icon"></i>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </section>
+
     <CategorySection :categories="categories" />
     <ProductSection :products="featuredProducts" />
+
+    <!-- Nueva sección de newsletter -->
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Únete a Nuestro Mundo</h2>
+        <p>Suscríbete para recibir las últimas tendencias y ofertas exclusivas</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" />
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -284,6 +338,104 @@ h2::after {
 
   .category-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Estilos para Features */
+.features {
+  padding: 4rem 2rem;
+  background: var(--color-background-soft);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-heading);
+}
+
+.feature-card p {
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+/* Estilos para Newsletter */
+.newsletter {
+  padding: 6rem 2rem;
+  background: linear-gradient(45deg, var(--color-background-soft), var(--color-background));
+  text-align: center;
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-heading);
+}
+
+.newsletter p {
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: var(--color-primary-light);
+}
+
+@media (max-width: 768px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    width: 100%;
   }
 }
 </style>

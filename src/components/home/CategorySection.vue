@@ -2,6 +2,7 @@
 interface Category {
   image: string
   title: string
+  description: string
 }
 
 defineProps<{
@@ -15,7 +16,10 @@ defineProps<{
     <div class="category-grid">
       <div class="category-card" v-for="category in categories" :key="category.title">
         <img :src="category.image" :alt="category.title" />
-        <h3>{{ category.title }}</h3>
+        <div class="category-content">
+          <h3>{{ category.title }}</h3>
+          <p>{{ category.description }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -80,13 +84,24 @@ h2::after {
   transform: scale(1.05);
 }
 
-.category-card h3 {
+.category-content {
   position: absolute;
   bottom: 30px;
   left: 30px;
+  right: 30px;
+}
+
+.category-card h3 {
   color: var(--color-white);
   font-size: 2rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.category-card p {
+  color: var(--color-white);
+  font-size: 1.1rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
