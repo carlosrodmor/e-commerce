@@ -8,7 +8,7 @@ export const getCategories = async (req: Request, res: Response) => {
       data: categoriesData.categories
     })
   } catch (error) {
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
       message: 'Error al obtener las categorías'
     })

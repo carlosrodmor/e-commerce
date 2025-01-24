@@ -1,23 +1,48 @@
 <script setup lang="ts">
-interface Category {
-  image: string
-  title: string
-  description: string
+import { ref, onMounted } from 'vue'
+import type { Category } from '@/interfaces/Category'
+import { categoryService } from '@/services/category.service'
+
+const categories = ref<Category[]>([])
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+const fetchCategories = async () => {
+  try {
+    categories.value = await categoryService.getCategories()
+  } catch (e) {
+    error.value = 'Error al cargar las categorías'
+    console.error(e)
+  } finally {
+    loading.value = false
+  }
 }
 
-defineProps<{
-  categories: Category[]
-}>()
+const handleImageError = (event: Event) => {
+  const img = event.target as HTMLImageElement
+  img.src = '/placeholder-image.jpg' // Imagen de respaldo
+}
+
+onMounted(() => {
+  fetchCategories()
+})
 </script>
 
 <template>
   <section class="categories">
     <h2>Categorías Destacadas</h2>
-    <div class="category-grid">
-      <div class="category-card" v-for="category in categories" :key="category.title">
-        <img :src="category.image" :alt="category.title" />
+
+    <div v-if="loading" class="loading">Cargando categorías...</div>
+
+    <div v-else-if="error" class="error">
+      {{ error }}
+    </div>
+
+    <div v-else class="category-grid">
+      <div class="category-card" v-for="category in categories" :key="category.id">
+        <img :src="category.image" :alt="category.name" @error="handleImageError" />
         <div class="category-content">
-          <h3>{{ category.title }}</h3>
+          <h3>{{ category.name }}</h3>
           <p>{{ category.description }}</p>
         </div>
       </div>
@@ -66,6 +91,7 @@ h2::after {
   border-radius: 16px;
   transition: all 0.4s ease;
   box-shadow: var(--shadow-md);
+  aspect-ratio: 16/9;
 }
 
 .category-card:hover {
@@ -75,9 +101,12 @@ h2::after {
 
 .category-card img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .category-card:hover img {
@@ -86,9 +115,20 @@ h2::after {
 
 .category-content {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
 }
 
 .category-card h3 {
@@ -103,6 +143,7 @@ h2::after {
   color: var(--color-white);
   font-size: 1.1rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -121,5 +162,17 @@ h2::after {
   .category-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--color-error);
 }
 </style>

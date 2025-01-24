@@ -8,7 +8,7 @@ export const getProducts = async (req: Request, res: Response) => {
       data: productsData.products
     })
   } catch (error) {
-    res.status(500).json({ 
+    res.status(500).json({
       status: 'error',
       message: 'Error al obtener los productos'
     })
@@ -18,7 +18,7 @@ export const getProducts = async (req: Request, res: Response) => {
 export const getProductById = async (req: Request, res: Response) => {
   try {
     const product = productsData.products.find(p => p.id === req.params.id)
-    
+
     if (!product) {
       return res.status(404).json({
         status: 'error',
@@ -32,7 +32,7 @@ export const getProductById = async (req: Request, res: Response) => {
     })
   } catch (error) {
     res.status(500).json({
-      status: 'error', 
+      status: 'error',
       message: 'Error al obtener el producto'
     })
   }

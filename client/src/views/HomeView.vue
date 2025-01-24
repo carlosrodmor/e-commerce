@@ -70,8 +70,8 @@ const features = [
 <template>
   <main>
     <HeroSection
-      title="Elegancia Minimalista"
-      subtitle="Descubre nuestra colección 2024: donde la simplicidad encuentra la sofisticación"
+      title="Diseño Minimalista para tu Hogar"
+      subtitle="Descubre nuestra colección de muebles y decoración"
       ctaText="Explorar Colección"
     />
 
@@ -86,8 +86,8 @@ const features = [
       </div>
     </section>
 
-    <CategorySection :categories="categories" />
-    <ProductSection :products="featuredProducts" />
+    <CategorySection />
+    <ProductSection />
 
     <!-- Nueva sección de newsletter -->
     <section class="newsletter">

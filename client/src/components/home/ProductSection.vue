@@ -1,27 +1,56 @@
 <script setup lang="ts">
-interface Product {
-  id: number
-  name: string
-  price: number
-  image: string
-  description: string
+import { ref, onMounted } from 'vue'
+import type { Product } from '@/interfaces/Product'
+import { productService } from '@/services/product.service'
+
+const products = ref<Product[]>([])
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+const fetchProducts = async () => {
+  try {
+    products.value = await productService.getProducts()
+  } catch (e) {
+    error.value = 'Error al cargar los productos'
+    console.error(e)
+  } finally {
+    loading.value = false
+  }
 }
 
-defineProps<{
-  products: Product[]
-}>()
+onMounted(() => {
+  fetchProducts()
+})
+
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('es-ES', {
+    style: 'currency',
+    currency: 'EUR',
+  }).format(price)
+}
 </script>
 
 <template>
   <section class="featured-products">
     <h2>Productos Destacados</h2>
-    <div class="product-grid">
+
+    <div v-if="loading" class="loading">Cargando productos...</div>
+
+    <div v-else-if="error" class="error">
+      {{ error }}
+    </div>
+
+    <div v-else class="product-grid">
       <div class="product-card" v-for="product in products" :key="product.id">
         <img :src="product.image" :alt="product.name" />
         <h3>{{ product.name }}</h3>
         <p class="description">{{ product.description }}</p>
-        <p class="price">€{{ product.price }}</p>
-        <button class="add-to-cart">Añadir al Carrito</button>
+        <p class="price">{{ formatPrice(product.price) }}</p>
+        <p class="stock" v-if="product.stock > 0">Stock: {{ product.stock }} unidades</p>
+        <p class="stock out" v-else>Sin stock</p>
+        <button class="add-to-cart" :disabled="product.stock === 0">
+          {{ product.stock > 0 ? 'Añadir al Carrito' : 'Agotado' }}
+        </button>
       </div>
     </div>
   </section>
@@ -103,6 +132,16 @@ h2::after {
   margin-bottom: 1.5rem;
 }
 
+.stock {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.stock.out {
+  color: var(--color-error);
+}
+
 .add-to-cart {
   width: 100%;
   padding: 1rem;
@@ -122,6 +161,11 @@ h2::after {
   opacity: 1;
 }
 
+.add-to-cart:disabled {
+  background: var(--color-gray-400);
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .featured-products {
     padding: 4rem 1rem;
@@ -130,5 +174,17 @@ h2::after {
   h2 {
     font-size: 2rem;
   }
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--color-error);
 }
 </style>
