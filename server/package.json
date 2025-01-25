@@ -8,7 +8,8 @@
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "generate-data": "ts-node src/scripts/generateData.ts"
   },
   "dependencies": {
     "@types/mongoose": "^5.11.96",
