@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Product } from '@/interfaces/Product'
 import ProductCard from './ProductCard.vue'
+import { watch } from 'vue'
 
 interface Props {
   products: Product[]
@@ -8,7 +9,16 @@ interface Props {
   error: string | null
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+
+// Log para debug
+watch(
+  () => props.products,
+  (newProducts) => {
+    console.log('Products in grid:', newProducts)
+  },
+  { immediate: true },
+)
 </script>
 
 <template>
