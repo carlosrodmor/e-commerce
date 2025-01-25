@@ -168,7 +168,6 @@ const resetFilters = () => {
             :checked="props.showInStock"
             @change="emit('update:showInStock', !props.showInStock)"
           />
-          <span class="checkbox-custom"></span>
           <span>En stock</span>
         </label>
 
@@ -178,7 +177,6 @@ const resetFilters = () => {
             :checked="props.showNewArrivals"
             @change="emit('update:showNewArrivals', !props.showNewArrivals)"
           />
-          <span class="checkbox-custom"></span>
           <span>Nuevos productos</span>
         </label>
 
@@ -188,7 +186,6 @@ const resetFilters = () => {
             :checked="props.showOnSale"
             @change="emit('update:showOnSale', !props.showOnSale)"
           />
-          <span class="checkbox-custom"></span>
           <span>En oferta</span>
         </label>
       </div>
@@ -362,40 +359,53 @@ select option {
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.75rem;
   cursor: pointer;
   user-select: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox:hover {
+  background-color: var(--bg-hover);
 }
 
 .checkbox input {
-  display: none;
-}
-
-.checkbox-custom {
-  width: 18px;
-  height: 18px;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
   border: 2px solid var(--color-border);
   border-radius: 4px;
+  outline: none;
+  cursor: pointer;
   position: relative;
   transition: all 0.2s ease;
+  background-color: var(--bg-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.checkbox input:checked + .checkbox-custom {
-  background: var(--color-primary);
+.checkbox input:checked {
+  background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-.checkbox input:checked + .checkbox-custom::after {
+.checkbox input:checked::after {
   content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+.checkbox input:hover {
+  border-color: var(--color-primary);
 }
 
 .checkbox span:last-child {
@@ -421,9 +431,9 @@ select option {
 }
 
 .reset-button:hover {
-  background: var(--color-primary-light);
+  background: var(--color-primary);
   border-color: var(--color-primary);
-  color: var(--color-primary);
+  color: white;
 }
 
 @media (max-width: 768px) {
