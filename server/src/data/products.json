@@ -1,0 +1,3202 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Moderno Toallas",
+      "description": "Moderno Toallas de diseño moderno fabricado en metal. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 845.04,
+      "image": "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "toallas",
+      "stock": 28,
+      "features": [
+        "Material: metal",
+        "Estilo: moderno",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 163,
+        "height": 127,
+        "depth": 171
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.6,
+      "reviews": 353,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "2",
+      "name": "Moderno Alfombras Baño",
+      "description": "Moderno Alfombras Baño de diseño moderno fabricado en algodón. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 253.1,
+      "image": "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "alfombras-baño",
+      "stock": 26,
+      "features": [
+        "Material: algodón",
+        "Estilo: moderno",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 156,
+        "height": 60,
+        "depth": 118
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.8,
+      "reviews": 148,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "3",
+      "name": "Minimalista Espejos",
+      "description": "Minimalista Espejos de diseño minimalista fabricado en madera. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 945.17,
+      "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "espejos",
+      "stock": 47,
+      "features": [
+        "Material: madera",
+        "Estilo: minimalista",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 63,
+        "height": 166,
+        "depth": 48
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.4,
+      "reviews": 461,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "4",
+      "name": "Nórdico Textiles",
+      "description": "Nórdico Textiles de diseño nórdico fabricado en lino. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 892.12,
+      "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "textiles",
+      "stock": 4,
+      "features": [
+        "Material: lino",
+        "Estilo: nórdico",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 111,
+        "height": 108,
+        "depth": 200
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.9,
+      "reviews": 216,
+      "isNewArrival": true,
+      "onSale": true
+    },
+    {
+      "id": "5",
+      "name": "Clásico Alfombras",
+      "description": "Clásico Alfombras de diseño clásico fabricado en mármol. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 768.41,
+      "image": "https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "alfombras",
+      "stock": 20,
+      "features": [
+        "Material: mármol",
+        "Estilo: clásico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 144,
+        "height": 54,
+        "depth": 142
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.1,
+      "reviews": 96,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "6",
+      "name": "Minimalista Organizadores",
+      "description": "Minimalista Organizadores de diseño minimalista fabricado en mármol. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 900.9,
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "organizadores",
+      "stock": 16,
+      "features": [
+        "Material: mármol",
+        "Estilo: minimalista",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 105,
+        "height": 178,
+        "depth": 101
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.3,
+      "reviews": 431,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "7",
+      "name": "Minimalista Toallas",
+      "description": "Minimalista Toallas de diseño minimalista fabricado en metal. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 833.49,
+      "image": "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "toallas",
+      "stock": 44,
+      "features": [
+        "Material: metal",
+        "Estilo: minimalista",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 189,
+        "height": 179,
+        "depth": 195
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.3,
+      "reviews": 69,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "8",
+      "name": "Clásico Mesas",
+      "description": "Clásico Mesas de diseño clásico fabricado en madera. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 862.68,
+      "image": "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "mesas",
+      "stock": 41,
+      "features": [
+        "Material: madera",
+        "Estilo: clásico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 200,
+        "height": 40,
+        "depth": 76
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.2,
+      "reviews": 33,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "9",
+      "name": "Clásico Escritorios",
+      "description": "Clásico Escritorios de diseño clásico fabricado en cerámica. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 643.87,
+      "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "escritorios",
+      "stock": 25,
+      "features": [
+        "Material: cerámica",
+        "Estilo: clásico",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 97,
+        "height": 89,
+        "depth": 168
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.3,
+      "reviews": 474,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "10",
+      "name": "Rústico Electrodomesticos",
+      "description": "Rústico Electrodomesticos de diseño rústico fabricado en terciopelo. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 53.13,
+      "image": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "electrodomesticos",
+      "stock": 8,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: rústico",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 175,
+        "height": 95,
+        "depth": 170
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 3.9,
+      "reviews": 344,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "11",
+      "name": "Moderno Accesorios",
+      "description": "Moderno Accesorios de diseño moderno fabricado en madera. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 308.76,
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "accesorios",
+      "stock": 15,
+      "features": [
+        "Material: madera",
+        "Estilo: moderno",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 200,
+        "height": 44,
+        "depth": 187
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4,
+      "reviews": 398,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "12",
+      "name": "Minimalista Alfombras",
+      "description": "Minimalista Alfombras de diseño minimalista fabricado en cerámica. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 106.78,
+      "image": "https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "alfombras",
+      "stock": 15,
+      "features": [
+        "Material: cerámica",
+        "Estilo: minimalista",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 34,
+        "height": 53,
+        "depth": 178
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.9,
+      "reviews": 394,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "13",
+      "name": "Nórdico Electrodomesticos",
+      "description": "Nórdico Electrodomesticos de diseño nórdico fabricado en cristal. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 536.43,
+      "image": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "electrodomesticos",
+      "stock": 9,
+      "features": [
+        "Material: cristal",
+        "Estilo: nórdico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 74,
+        "height": 49,
+        "depth": 170
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.1,
+      "reviews": 415,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "14",
+      "name": "Nórdico Mesas",
+      "description": "Nórdico Mesas de diseño nórdico fabricado en madera. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 999.88,
+      "image": "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "mesas",
+      "stock": 27,
+      "features": [
+        "Material: madera",
+        "Estilo: nórdico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 86,
+        "height": 146,
+        "depth": 118
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.4,
+      "reviews": 127,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "15",
+      "name": "Rústico Guirnaldas",
+      "description": "Rústico Guirnaldas de diseño rústico fabricado en cristal. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 150.83,
+      "image": "https://images.unsplash.com/photo-1573661683813-13fe0b88cb30?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "guirnaldas",
+      "stock": 44,
+      "features": [
+        "Material: cristal",
+        "Estilo: rústico",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 166,
+        "height": 79,
+        "depth": 102
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.6,
+      "reviews": 10,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "16",
+      "name": "Minimalista Mesas",
+      "description": "Minimalista Mesas de diseño minimalista fabricado en madera. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 89.36,
+      "image": "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "mesas",
+      "stock": 22,
+      "features": [
+        "Material: madera",
+        "Estilo: minimalista",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 189,
+        "height": 30,
+        "depth": 141
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.7,
+      "reviews": 63,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "17",
+      "name": "Moderno Electrodomesticos",
+      "description": "Moderno Electrodomesticos de diseño moderno fabricado en cristal. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 727.03,
+      "image": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "electrodomesticos",
+      "stock": 29,
+      "features": [
+        "Material: cristal",
+        "Estilo: moderno",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 163,
+        "height": 154,
+        "depth": 104
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4,
+      "reviews": 180,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "18",
+      "name": "Rústico Organizadores",
+      "description": "Rústico Organizadores de diseño rústico fabricado en lino. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 877.75,
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "organizadores",
+      "stock": 3,
+      "features": [
+        "Material: lino",
+        "Estilo: rústico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 94,
+        "height": 32,
+        "depth": 184
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4,
+      "reviews": 443,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "19",
+      "name": "Nórdico Cubiertos",
+      "description": "Nórdico Cubiertos de diseño nórdico fabricado en metal. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 579.09,
+      "image": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "cubiertos",
+      "stock": 10,
+      "features": [
+        "Material: metal",
+        "Estilo: nórdico",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 132,
+        "height": 106,
+        "depth": 89
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.8,
+      "reviews": 149,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "20",
+      "name": "Nórdico Electrodomesticos",
+      "description": "Nórdico Electrodomesticos de diseño nórdico fabricado en mármol. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 380.83,
+      "image": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "electrodomesticos",
+      "stock": 31,
+      "features": [
+        "Material: mármol",
+        "Estilo: nórdico",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 127,
+        "height": 175,
+        "depth": 65
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.1,
+      "reviews": 336,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "21",
+      "name": "Clásico Vajillas",
+      "description": "Clásico Vajillas de diseño clásico fabricado en lino. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 364.49,
+      "image": "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "vajillas",
+      "stock": 25,
+      "features": [
+        "Material: lino",
+        "Estilo: clásico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 52,
+        "height": 151,
+        "depth": 74
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.3,
+      "reviews": 88,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "22",
+      "name": "Nórdico Lamparas Techo",
+      "description": "Nórdico Lamparas Techo de diseño nórdico fabricado en cerámica. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 449.58,
+      "image": "https://images.unsplash.com/photo-1573661683813-13fe0b88cb30?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-techo",
+      "stock": 45,
+      "features": [
+        "Material: cerámica",
+        "Estilo: nórdico",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 101,
+        "height": 91,
+        "depth": 38
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.7,
+      "reviews": 261,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "23",
+      "name": "Rústico Textiles",
+      "description": "Rústico Textiles de diseño rústico fabricado en cristal. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 753,
+      "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "textiles",
+      "stock": 46,
+      "features": [
+        "Material: cristal",
+        "Estilo: rústico",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 123,
+        "height": 195,
+        "depth": 195
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.3,
+      "reviews": 417,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "24",
+      "name": "Clásico Lamparas Techo",
+      "description": "Clásico Lamparas Techo de diseño clásico fabricado en algodón. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 499.19,
+      "image": "https://images.unsplash.com/photo-1573661683813-13fe0b88cb30?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-techo",
+      "stock": 16,
+      "features": [
+        "Material: algodón",
+        "Estilo: clásico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 196,
+        "height": 128,
+        "depth": 49
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.7,
+      "reviews": 160,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "25",
+      "name": "Industrial Focos",
+      "description": "Industrial Focos de diseño industrial fabricado en cerámica. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 722.5,
+      "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "focos",
+      "stock": 11,
+      "features": [
+        "Material: cerámica",
+        "Estilo: industrial",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 59,
+        "height": 104,
+        "depth": 174
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.1,
+      "reviews": 90,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "26",
+      "name": "Nórdico Vajillas",
+      "description": "Nórdico Vajillas de diseño nórdico fabricado en algodón. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 292.37,
+      "image": "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "vajillas",
+      "stock": 50,
+      "features": [
+        "Material: algodón",
+        "Estilo: nórdico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 128,
+        "height": 135,
+        "depth": 97
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.3,
+      "reviews": 90,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "27",
+      "name": "Industrial Alfombras",
+      "description": "Industrial Alfombras de diseño industrial fabricado en madera. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 234.49,
+      "image": "https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "alfombras",
+      "stock": 37,
+      "features": [
+        "Material: madera",
+        "Estilo: industrial",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 178,
+        "height": 161,
+        "depth": 57
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.5,
+      "reviews": 294,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "28",
+      "name": "Minimalista Escritorios",
+      "description": "Minimalista Escritorios de diseño minimalista fabricado en terciopelo. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 661.21,
+      "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "escritorios",
+      "stock": 43,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: minimalista",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 200,
+        "height": 165,
+        "depth": 58
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.7,
+      "reviews": 82,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "29",
+      "name": "Industrial Cubiertos",
+      "description": "Industrial Cubiertos de diseño industrial fabricado en lino. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 611.37,
+      "image": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "cubiertos",
+      "stock": 44,
+      "features": [
+        "Material: lino",
+        "Estilo: industrial",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 197,
+        "height": 119,
+        "depth": 98
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.6,
+      "reviews": 376,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "30",
+      "name": "Moderno Organizadores",
+      "description": "Moderno Organizadores de diseño moderno fabricado en metal. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 250.49,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 40,
+      "features": [
+        "Material: metal",
+        "Estilo: moderno",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 90,
+        "height": 91,
+        "depth": 194
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.5,
+      "reviews": 225,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "31",
+      "name": "Industrial Sillas",
+      "description": "Industrial Sillas de diseño industrial fabricado en madera. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 843.42,
+      "image": "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "sillas",
+      "stock": 45,
+      "features": [
+        "Material: madera",
+        "Estilo: industrial",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 40,
+        "height": 150,
+        "depth": 200
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.2,
+      "reviews": 223,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "32",
+      "name": "Clásico Ollas",
+      "description": "Clásico Ollas de diseño clásico fabricado en terciopelo. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 783,
+      "image": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "ollas",
+      "stock": 41,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: clásico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 177,
+        "height": 76,
+        "depth": 131
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 3.8,
+      "reviews": 165,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "33",
+      "name": "Industrial Estanterias",
+      "description": "Industrial Estanterias de diseño industrial fabricado en cristal. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 432.57,
+      "image": "https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "estanterias",
+      "stock": 4,
+      "features": [
+        "Material: cristal",
+        "Estilo: industrial",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 150,
+        "height": 159,
+        "depth": 51
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.7,
+      "reviews": 356,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "34",
+      "name": "Clásico Alfombras",
+      "description": "Clásico Alfombras de diseño clásico fabricado en algodón. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 856.15,
+      "image": "https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "alfombras",
+      "stock": 14,
+      "features": [
+        "Material: algodón",
+        "Estilo: clásico",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 155,
+        "height": 153,
+        "depth": 158
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.5,
+      "reviews": 219,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "35",
+      "name": "Minimalista Lamparas Pie",
+      "description": "Minimalista Lamparas Pie de diseño minimalista fabricado en madera. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 197.02,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-pie",
+      "stock": 42,
+      "features": [
+        "Material: madera",
+        "Estilo: minimalista",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 124,
+        "height": 131,
+        "depth": 161
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.2,
+      "reviews": 373,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "36",
+      "name": "Minimalista Sillas",
+      "description": "Minimalista Sillas de diseño minimalista fabricado en cristal. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 202.44,
+      "image": "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "sillas",
+      "stock": 0,
+      "features": [
+        "Material: cristal",
+        "Estilo: minimalista",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 92,
+        "height": 193,
+        "depth": 164
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.7,
+      "reviews": 328,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "37",
+      "name": "Industrial Sofas",
+      "description": "Industrial Sofas de diseño industrial fabricado en cristal. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 422.88,
+      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "sofas",
+      "stock": 30,
+      "features": [
+        "Material: cristal",
+        "Estilo: industrial",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 169,
+        "height": 184,
+        "depth": 165
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.6,
+      "reviews": 474,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "38",
+      "name": "Industrial Espejos",
+      "description": "Industrial Espejos de diseño industrial fabricado en mármol. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 279.22,
+      "image": "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "espejos",
+      "stock": 26,
+      "features": [
+        "Material: mármol",
+        "Estilo: industrial",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 121,
+        "height": 127,
+        "depth": 130
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.4,
+      "reviews": 419,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "39",
+      "name": "Clásico Jarrones",
+      "description": "Clásico Jarrones de diseño clásico fabricado en cerámica. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 345.71,
+      "image": "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "jarrones",
+      "stock": 10,
+      "features": [
+        "Material: cerámica",
+        "Estilo: clásico",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 125,
+        "height": 82,
+        "depth": 174
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.8,
+      "reviews": 52,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "40",
+      "name": "Clásico Alfombras Baño",
+      "description": "Clásico Alfombras Baño de diseño clásico fabricado en cerámica. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 697.01,
+      "image": "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "alfombras-baño",
+      "stock": 15,
+      "features": [
+        "Material: cerámica",
+        "Estilo: clásico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 57,
+        "height": 33,
+        "depth": 191
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.7,
+      "reviews": 488,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "41",
+      "name": "Clásico Alfombras",
+      "description": "Clásico Alfombras de diseño clásico fabricado en algodón. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 878.95,
+      "image": "https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "alfombras",
+      "stock": 15,
+      "features": [
+        "Material: algodón",
+        "Estilo: clásico",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 143,
+        "height": 190,
+        "depth": 193
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.2,
+      "reviews": 490,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "42",
+      "name": "Clásico Textiles Cocina",
+      "description": "Clásico Textiles Cocina de diseño clásico fabricado en algodón. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 820.85,
+      "image": "https://images.unsplash.com/photo-1578661f1396-c63cc96c2b98?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "textiles-cocina",
+      "stock": 49,
+      "features": [
+        "Material: algodón",
+        "Estilo: clásico",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 119,
+        "height": 181,
+        "depth": 62
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.8,
+      "reviews": 343,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "43",
+      "name": "Rústico Ollas",
+      "description": "Rústico Ollas de diseño rústico fabricado en metal. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 978.72,
+      "image": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "ollas",
+      "stock": 4,
+      "features": [
+        "Material: metal",
+        "Estilo: rústico",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 112,
+        "height": 80,
+        "depth": 187
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.2,
+      "reviews": 167,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "44",
+      "name": "Minimalista Organizadores",
+      "description": "Minimalista Organizadores de diseño minimalista fabricado en lino. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 503.23,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 42,
+      "features": [
+        "Material: lino",
+        "Estilo: minimalista",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 86,
+        "height": 190,
+        "depth": 97
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.5,
+      "reviews": 285,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "45",
+      "name": "Rústico Lamparas Pie",
+      "description": "Rústico Lamparas Pie de diseño rústico fabricado en lino. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 308.27,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-pie",
+      "stock": 37,
+      "features": [
+        "Material: lino",
+        "Estilo: rústico",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 125,
+        "height": 189,
+        "depth": 179
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.6,
+      "reviews": 318,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "46",
+      "name": "Clásico Ollas",
+      "description": "Clásico Ollas de diseño clásico fabricado en metal. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 46.81,
+      "image": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "ollas",
+      "stock": 5,
+      "features": [
+        "Material: metal",
+        "Estilo: clásico",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 157,
+        "height": 187,
+        "depth": 71
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.8,
+      "reviews": 91,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "47",
+      "name": "Minimalista Espejos",
+      "description": "Minimalista Espejos de diseño minimalista fabricado en cerámica. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 528.39,
+      "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "espejos",
+      "stock": 20,
+      "features": [
+        "Material: cerámica",
+        "Estilo: minimalista",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 66,
+        "height": 139,
+        "depth": 64
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.1,
+      "reviews": 464,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "48",
+      "name": "Minimalista Lamparas Techo",
+      "description": "Minimalista Lamparas Techo de diseño minimalista fabricado en metal. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 410.6,
+      "image": "https://images.unsplash.com/photo-1573661683813-13fe0b88cb30?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-techo",
+      "stock": 46,
+      "features": [
+        "Material: metal",
+        "Estilo: minimalista",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 185,
+        "height": 61,
+        "depth": 132
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.3,
+      "reviews": 170,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "49",
+      "name": "Nórdico Textiles",
+      "description": "Nórdico Textiles de diseño nórdico fabricado en cristal. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 475.21,
+      "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "textiles",
+      "stock": 8,
+      "features": [
+        "Material: cristal",
+        "Estilo: nórdico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 167,
+        "height": 73,
+        "depth": 102
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.6,
+      "reviews": 289,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "50",
+      "name": "Minimalista Apliques",
+      "description": "Minimalista Apliques de diseño minimalista fabricado en lino. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 356.3,
+      "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "apliques",
+      "stock": 50,
+      "features": [
+        "Material: lino",
+        "Estilo: minimalista",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 167,
+        "height": 109,
+        "depth": 160
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.9,
+      "reviews": 225,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "51",
+      "name": "Minimalista Espejos",
+      "description": "Minimalista Espejos de diseño minimalista fabricado en cerámica. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 155.49,
+      "image": "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "espejos",
+      "stock": 30,
+      "features": [
+        "Material: cerámica",
+        "Estilo: minimalista",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 186,
+        "height": 58,
+        "depth": 34
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.1,
+      "reviews": 244,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "52",
+      "name": "Clásico Vajillas",
+      "description": "Clásico Vajillas de diseño clásico fabricado en metal. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 945.9,
+      "image": "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "vajillas",
+      "stock": 23,
+      "features": [
+        "Material: metal",
+        "Estilo: clásico",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 93,
+        "height": 106,
+        "depth": 181
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.1,
+      "reviews": 487,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "53",
+      "name": "Clásico Organizadores",
+      "description": "Clásico Organizadores de diseño clásico fabricado en algodón. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 420.01,
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "organizadores",
+      "stock": 22,
+      "features": [
+        "Material: algodón",
+        "Estilo: clásico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 102,
+        "height": 95,
+        "depth": 185
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.5,
+      "reviews": 74,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "54",
+      "name": "Rústico Organizadores",
+      "description": "Rústico Organizadores de diseño rústico fabricado en cristal. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 322.59,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 1,
+      "features": [
+        "Material: cristal",
+        "Estilo: rústico",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 141,
+        "height": 174,
+        "depth": 168
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.9,
+      "reviews": 487,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "55",
+      "name": "Nórdico Sofas",
+      "description": "Nórdico Sofas de diseño nórdico fabricado en madera. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 463.73,
+      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "sofas",
+      "stock": 13,
+      "features": [
+        "Material: madera",
+        "Estilo: nórdico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 165,
+        "height": 137,
+        "depth": 90
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.4,
+      "reviews": 284,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "56",
+      "name": "Minimalista Cortinas",
+      "description": "Minimalista Cortinas de diseño minimalista fabricado en algodón. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 360.38,
+      "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "cortinas",
+      "stock": 30,
+      "features": [
+        "Material: algodón",
+        "Estilo: minimalista",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 158,
+        "height": 158,
+        "depth": 159
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4,
+      "reviews": 415,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "57",
+      "name": "Nórdico Escritorios",
+      "description": "Nórdico Escritorios de diseño nórdico fabricado en mármol. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 108.63,
+      "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "escritorios",
+      "stock": 42,
+      "features": [
+        "Material: mármol",
+        "Estilo: nórdico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 35,
+        "height": 195,
+        "depth": 44
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.1,
+      "reviews": 105,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "58",
+      "name": "Minimalista Cuadros",
+      "description": "Minimalista Cuadros de diseño minimalista fabricado en metal. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 614.32,
+      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "cuadros",
+      "stock": 39,
+      "features": [
+        "Material: metal",
+        "Estilo: minimalista",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 60,
+        "height": 74,
+        "depth": 79
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4,
+      "reviews": 56,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "59",
+      "name": "Nórdico Cojines",
+      "description": "Nórdico Cojines de diseño nórdico fabricado en madera. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 719.69,
+      "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e6?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "cojines",
+      "stock": 5,
+      "features": [
+        "Material: madera",
+        "Estilo: nórdico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 60,
+        "height": 173,
+        "depth": 145
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.9,
+      "reviews": 217,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "60",
+      "name": "Industrial Cubiertos",
+      "description": "Industrial Cubiertos de diseño industrial fabricado en terciopelo. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 235.26,
+      "image": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "cubiertos",
+      "stock": 38,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: industrial",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 53,
+        "height": 58,
+        "depth": 101
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.8,
+      "reviews": 387,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "61",
+      "name": "Nórdico Textiles",
+      "description": "Nórdico Textiles de diseño nórdico fabricado en terciopelo. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 991.58,
+      "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "textiles",
+      "stock": 48,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: nórdico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 130,
+        "height": 151,
+        "depth": 146
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.5,
+      "reviews": 189,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "62",
+      "name": "Nórdico Lamparas Pie",
+      "description": "Nórdico Lamparas Pie de diseño nórdico fabricado en algodón. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 382.14,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-pie",
+      "stock": 14,
+      "features": [
+        "Material: algodón",
+        "Estilo: nórdico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 173,
+        "height": 94,
+        "depth": 63
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 5,
+      "reviews": 407,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "63",
+      "name": "Nórdico Organizadores",
+      "description": "Nórdico Organizadores de diseño nórdico fabricado en cristal. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 900.45,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 5,
+      "features": [
+        "Material: cristal",
+        "Estilo: nórdico",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 54,
+        "height": 191,
+        "depth": 151
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.9,
+      "reviews": 104,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "64",
+      "name": "Rústico Espejos",
+      "description": "Rústico Espejos de diseño rústico fabricado en madera. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 904.12,
+      "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "espejos",
+      "stock": 20,
+      "features": [
+        "Material: madera",
+        "Estilo: rústico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 55,
+        "height": 122,
+        "depth": 93
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.8,
+      "reviews": 441,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "65",
+      "name": "Moderno Organizadores",
+      "description": "Moderno Organizadores de diseño moderno fabricado en metal. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 739.7,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 20,
+      "features": [
+        "Material: metal",
+        "Estilo: moderno",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 84,
+        "height": 191,
+        "depth": 50
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.6,
+      "reviews": 466,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "66",
+      "name": "Moderno Lamparas Mesa",
+      "description": "Moderno Lamparas Mesa de diseño moderno fabricado en algodón. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 425.3,
+      "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-mesa",
+      "stock": 32,
+      "features": [
+        "Material: algodón",
+        "Estilo: moderno",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 70,
+        "height": 122,
+        "depth": 54
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.7,
+      "reviews": 473,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "67",
+      "name": "Minimalista Vajillas",
+      "description": "Minimalista Vajillas de diseño minimalista fabricado en metal. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 670.9,
+      "image": "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "vajillas",
+      "stock": 7,
+      "features": [
+        "Material: metal",
+        "Estilo: minimalista",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 157,
+        "height": 51,
+        "depth": 159
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.9,
+      "reviews": 474,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "68",
+      "name": "Nórdico Espejos",
+      "description": "Nórdico Espejos de diseño nórdico fabricado en cerámica. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 164.17,
+      "image": "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "espejos",
+      "stock": 35,
+      "features": [
+        "Material: cerámica",
+        "Estilo: nórdico",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 62,
+        "height": 101,
+        "depth": 138
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.4,
+      "reviews": 497,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "69",
+      "name": "Industrial Organizadores",
+      "description": "Industrial Organizadores de diseño industrial fabricado en terciopelo. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 322.81,
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "organizadores",
+      "stock": 7,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: industrial",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 60,
+        "height": 111,
+        "depth": 137
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.4,
+      "reviews": 420,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "70",
+      "name": "Industrial Organizadores",
+      "description": "Industrial Organizadores de diseño industrial fabricado en madera. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 764.24,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 49,
+      "features": [
+        "Material: madera",
+        "Estilo: industrial",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 166,
+        "height": 111,
+        "depth": 56
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro"
+      ],
+      "rating": 5,
+      "reviews": 296,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "71",
+      "name": "Nórdico Cuadros",
+      "description": "Nórdico Cuadros de diseño nórdico fabricado en madera. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 729.41,
+      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "cuadros",
+      "stock": 14,
+      "features": [
+        "Material: madera",
+        "Estilo: nórdico",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 31,
+        "height": 58,
+        "depth": 160
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.9,
+      "reviews": 125,
+      "isNewArrival": true,
+      "onSale": true
+    },
+    {
+      "id": "72",
+      "name": "Nórdico Lamparas Mesa",
+      "description": "Nórdico Lamparas Mesa de diseño nórdico fabricado en metal. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 776.12,
+      "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-mesa",
+      "stock": 43,
+      "features": [
+        "Material: metal",
+        "Estilo: nórdico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 114,
+        "height": 37,
+        "depth": 179
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.2,
+      "reviews": 235,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "73",
+      "name": "Minimalista Escritorios",
+      "description": "Minimalista Escritorios de diseño minimalista fabricado en terciopelo. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 611.22,
+      "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "escritorios",
+      "stock": 8,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: minimalista",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 88,
+        "height": 162,
+        "depth": 146
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.6,
+      "reviews": 293,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "74",
+      "name": "Clásico Alfombras Baño",
+      "description": "Clásico Alfombras Baño de diseño clásico fabricado en algodón. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 599.17,
+      "image": "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "alfombras-baño",
+      "stock": 35,
+      "features": [
+        "Material: algodón",
+        "Estilo: clásico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 124,
+        "height": 52,
+        "depth": 105
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 3.6,
+      "reviews": 152,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "75",
+      "name": "Rústico Estanterias",
+      "description": "Rústico Estanterias de diseño rústico fabricado en mármol. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 406.46,
+      "image": "https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "estanterias",
+      "stock": 5,
+      "features": [
+        "Material: mármol",
+        "Estilo: rústico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 75,
+        "height": 119,
+        "depth": 49
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 3.6,
+      "reviews": 446,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "76",
+      "name": "Minimalista Guirnaldas",
+      "description": "Minimalista Guirnaldas de diseño minimalista fabricado en madera. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 322.15,
+      "image": "https://images.unsplash.com/photo-1573661683813-13fe0b88cb30?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "guirnaldas",
+      "stock": 34,
+      "features": [
+        "Material: madera",
+        "Estilo: minimalista",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 101,
+        "height": 85,
+        "depth": 181
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.7,
+      "reviews": 157,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "77",
+      "name": "Industrial Escritorios",
+      "description": "Industrial Escritorios de diseño industrial fabricado en cerámica. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 709.04,
+      "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "escritorios",
+      "stock": 26,
+      "features": [
+        "Material: cerámica",
+        "Estilo: industrial",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 148,
+        "height": 55,
+        "depth": 158
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.3,
+      "reviews": 76,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "78",
+      "name": "Rústico Sofas",
+      "description": "Rústico Sofas de diseño rústico fabricado en cerámica. Acabado en dorado, perfecto para cualquier espacio.",
+      "price": 648.68,
+      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "sofas",
+      "stock": 36,
+      "features": [
+        "Material: cerámica",
+        "Estilo: rústico",
+        "Color: dorado",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 193,
+        "height": 54,
+        "depth": 60
+      },
+      "colors": [
+        "dorado",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.5,
+      "reviews": 35,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "79",
+      "name": "Moderno Electrodomesticos",
+      "description": "Moderno Electrodomesticos de diseño moderno fabricado en algodón. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 530.93,
+      "image": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "electrodomesticos",
+      "stock": 21,
+      "features": [
+        "Material: algodón",
+        "Estilo: moderno",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 68,
+        "height": 197,
+        "depth": 180
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.6,
+      "reviews": 219,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "80",
+      "name": "Minimalista Textiles Cocina",
+      "description": "Minimalista Textiles Cocina de diseño minimalista fabricado en algodón. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 89,
+      "image": "https://images.unsplash.com/photo-1578661f1396-c63cc96c2b98?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "textiles-cocina",
+      "stock": 30,
+      "features": [
+        "Material: algodón",
+        "Estilo: minimalista",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 196,
+        "height": 71,
+        "depth": 152
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.7,
+      "reviews": 366,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "81",
+      "name": "Clásico Organizadores",
+      "description": "Clásico Organizadores de diseño clásico fabricado en madera. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 646.75,
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "organizadores",
+      "stock": 39,
+      "features": [
+        "Material: madera",
+        "Estilo: clásico",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 135,
+        "height": 87,
+        "depth": 81
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.3,
+      "reviews": 202,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "82",
+      "name": "Nórdico Lamparas Mesa",
+      "description": "Nórdico Lamparas Mesa de diseño nórdico fabricado en cristal. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 181.01,
+      "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "lamparas-mesa",
+      "stock": 28,
+      "features": [
+        "Material: cristal",
+        "Estilo: nórdico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 45,
+        "height": 75,
+        "depth": 153
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4,
+      "reviews": 145,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "83",
+      "name": "Clásico Cojines",
+      "description": "Clásico Cojines de diseño clásico fabricado en terciopelo. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 80.37,
+      "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e6?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "cojines",
+      "stock": 25,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: clásico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 170,
+        "height": 42,
+        "depth": 108
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.7,
+      "reviews": 465,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "84",
+      "name": "Industrial Sofas",
+      "description": "Industrial Sofas de diseño industrial fabricado en algodón. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 696.27,
+      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "sofas",
+      "stock": 2,
+      "features": [
+        "Material: algodón",
+        "Estilo: industrial",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 80,
+        "height": 72,
+        "depth": 72
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.4,
+      "reviews": 187,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "85",
+      "name": "Moderno Guirnaldas",
+      "description": "Moderno Guirnaldas de diseño moderno fabricado en mármol. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 289.16,
+      "image": "https://images.unsplash.com/photo-1573661683813-13fe0b88cb30?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "guirnaldas",
+      "stock": 26,
+      "features": [
+        "Material: mármol",
+        "Estilo: moderno",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 178,
+        "height": 87,
+        "depth": 200
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.7,
+      "reviews": 23,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "86",
+      "name": "Industrial Jarrones",
+      "description": "Industrial Jarrones de diseño industrial fabricado en mármol. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 496.87,
+      "image": "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "jarrones",
+      "stock": 46,
+      "features": [
+        "Material: mármol",
+        "Estilo: industrial",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 167,
+        "height": 119,
+        "depth": 186
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.7,
+      "reviews": 79,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "87",
+      "name": "Clásico Alfombras",
+      "description": "Clásico Alfombras de diseño clásico fabricado en algodón. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 45.28,
+      "image": "https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "alfombras",
+      "stock": 26,
+      "features": [
+        "Material: algodón",
+        "Estilo: clásico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 186,
+        "height": 50,
+        "depth": 175
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.8,
+      "reviews": 324,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "88",
+      "name": "Rústico Cubiertos",
+      "description": "Rústico Cubiertos de diseño rústico fabricado en metal. Acabado en negro, perfecto para cualquier espacio.",
+      "price": 53.19,
+      "image": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "cubiertos",
+      "stock": 32,
+      "features": [
+        "Material: metal",
+        "Estilo: rústico",
+        "Color: negro",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 137,
+        "height": 146,
+        "depth": 171
+      },
+      "colors": [
+        "negro",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.7,
+      "reviews": 117,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "89",
+      "name": "Rústico Espejos",
+      "description": "Rústico Espejos de diseño rústico fabricado en metal. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 207.71,
+      "image": "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800&q=80",
+      "category": "5",
+      "subCategory": "espejos",
+      "stock": 9,
+      "features": [
+        "Material: metal",
+        "Estilo: rústico",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 152,
+        "height": 46,
+        "depth": 79
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.9,
+      "reviews": 50,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "90",
+      "name": "Nórdico Cojines",
+      "description": "Nórdico Cojines de diseño nórdico fabricado en cerámica. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 64.43,
+      "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e6?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "cojines",
+      "stock": 46,
+      "features": [
+        "Material: cerámica",
+        "Estilo: nórdico",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 121,
+        "height": 57,
+        "depth": 178
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4,
+      "reviews": 26,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "91",
+      "name": "Moderno Organizadores",
+      "description": "Moderno Organizadores de diseño moderno fabricado en lino. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 259.14,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 19,
+      "features": [
+        "Material: lino",
+        "Estilo: moderno",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 36,
+        "height": 31,
+        "depth": 139
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.9,
+      "reviews": 498,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "92",
+      "name": "Nórdico Electrodomesticos",
+      "description": "Nórdico Electrodomesticos de diseño nórdico fabricado en metal. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 635.08,
+      "image": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "electrodomesticos",
+      "stock": 0,
+      "features": [
+        "Material: metal",
+        "Estilo: nórdico",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 40,
+        "height": 110,
+        "depth": 175
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 5,
+      "reviews": 447,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "93",
+      "name": "Minimalista Focos",
+      "description": "Minimalista Focos de diseño minimalista fabricado en metal. Acabado en verde, perfecto para cualquier espacio.",
+      "price": 933.04,
+      "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "focos",
+      "stock": 8,
+      "features": [
+        "Material: metal",
+        "Estilo: minimalista",
+        "Color: verde",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 91,
+        "height": 35,
+        "depth": 138
+      },
+      "colors": [
+        "verde",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.2,
+      "reviews": 130,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "94",
+      "name": "Industrial Organizadores",
+      "description": "Industrial Organizadores de diseño industrial fabricado en mármol. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 650.63,
+      "image": "https://images.unsplash.com/photo-1520981825232-ece5fae45120?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "organizadores",
+      "stock": 19,
+      "features": [
+        "Material: mármol",
+        "Estilo: industrial",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 169,
+        "height": 129,
+        "depth": 151
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 3.6,
+      "reviews": 472,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "95",
+      "name": "Nórdico Espejos",
+      "description": "Nórdico Espejos de diseño nórdico fabricado en metal. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 115.76,
+      "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+      "category": "3",
+      "subCategory": "espejos",
+      "stock": 5,
+      "features": [
+        "Material: metal",
+        "Estilo: nórdico",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 84,
+        "height": 172,
+        "depth": 74
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro"
+      ],
+      "rating": 4.4,
+      "reviews": 42,
+      "isNewArrival": false,
+      "onSale": true
+    },
+    {
+      "id": "96",
+      "name": "Minimalista Textiles Cocina",
+      "description": "Minimalista Textiles Cocina de diseño minimalista fabricado en cerámica. Acabado en beige, perfecto para cualquier espacio.",
+      "price": 574.76,
+      "image": "https://images.unsplash.com/photo-1578661f1396-c63cc96c2b98?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "textiles-cocina",
+      "stock": 34,
+      "features": [
+        "Material: cerámica",
+        "Estilo: minimalista",
+        "Color: beige",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 172,
+        "height": 97,
+        "depth": 175
+      },
+      "colors": [
+        "beige",
+        "blanco",
+        "negro",
+        "gris",
+        "beige"
+      ],
+      "rating": 4.4,
+      "reviews": 490,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "97",
+      "name": "Minimalista Apliques",
+      "description": "Minimalista Apliques de diseño minimalista fabricado en metal. Acabado en rosa, perfecto para cualquier espacio.",
+      "price": 574.01,
+      "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "apliques",
+      "stock": 0,
+      "features": [
+        "Material: metal",
+        "Estilo: minimalista",
+        "Color: rosa",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 118,
+        "height": 172,
+        "depth": 42
+      },
+      "colors": [
+        "rosa",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.7,
+      "reviews": 308,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "98",
+      "name": "Rústico Escritorios",
+      "description": "Rústico Escritorios de diseño rústico fabricado en terciopelo. Acabado en gris, perfecto para cualquier espacio.",
+      "price": 368.52,
+      "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+      "category": "1",
+      "subCategory": "escritorios",
+      "stock": 41,
+      "features": [
+        "Material: terciopelo",
+        "Estilo: rústico",
+        "Color: gris",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 67,
+        "height": 173,
+        "depth": 32
+      },
+      "colors": [
+        "gris",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 4.7,
+      "reviews": 315,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "99",
+      "name": "Rústico Apliques",
+      "description": "Rústico Apliques de diseño rústico fabricado en cerámica. Acabado en azul, perfecto para cualquier espacio.",
+      "price": 240.09,
+      "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+      "category": "2",
+      "subCategory": "apliques",
+      "stock": 40,
+      "features": [
+        "Material: cerámica",
+        "Estilo: rústico",
+        "Color: azul",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 168,
+        "height": 184,
+        "depth": 106
+      },
+      "colors": [
+        "azul",
+        "blanco",
+        "negro"
+      ],
+      "rating": 3.8,
+      "reviews": 79,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "100",
+      "name": "Industrial Vajillas",
+      "description": "Industrial Vajillas de diseño industrial fabricado en mármol. Acabado en blanco, perfecto para cualquier espacio.",
+      "price": 171.33,
+      "image": "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=800&q=80",
+      "category": "4",
+      "subCategory": "vajillas",
+      "stock": 24,
+      "features": [
+        "Material: mármol",
+        "Estilo: industrial",
+        "Color: blanco",
+        "Fácil montaje",
+        "Alta durabilidad"
+      ],
+      "dimensions": {
+        "width": 149,
+        "height": 145,
+        "depth": 37
+      },
+      "colors": [
+        "blanco",
+        "blanco",
+        "negro",
+        "gris"
+      ],
+      "rating": 3.5,
+      "reviews": 259,
+      "isNewArrival": false,
+      "onSale": true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Muebles",
+      "subCategories": [
+        "sillas",
+        "mesas",
+        "sofas",
+        "estanterias",
+        "camas",
+        "escritorios"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Iluminación",
+      "subCategories": [
+        "lamparas-pie",
+        "lamparas-techo",
+        "apliques",
+        "lamparas-mesa",
+        "focos",
+        "guirnaldas"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Decoración",
+      "subCategories": [
+        "jarrones",
+        "espejos",
+        "cuadros",
+        "textiles",
+        "alfombras",
+        "cojines"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Cocina",
+      "subCategories": [
+        "vajillas",
+        "cubiertos",
+        "ollas",
+        "electrodomesticos",
+        "organizadores",
+        "textiles-cocina"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Baño",
+      "subCategories": [
+        "toallas",
+        "accesorios",
+        "organizadores",
+        "espejos",
+        "cortinas",
+        "alfombras-baño"
+      ]
+    }
+  ]
+}
