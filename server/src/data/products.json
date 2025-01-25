@@ -3,29 +3,107 @@
     {
       "id": "1",
       "name": "Silla Minimal",
-      "description": "Silla de diseño minimalista perfecta para cualquier espacio",
+      "description": "Silla de diseño minimalista perfecta para cualquier espacio. Fabricada en madera de roble y acero inoxidable.",
       "price": 199.99,
       "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
       "category": "1",
-      "stock": 10
+      "subCategory": "sillas",
+      "stock": 10,
+      "features": ["Madera de roble", "Acero inoxidable", "Apilable"],
+      "dimensions": {
+        "width": 45,
+        "height": 85,
+        "depth": 52
+      },
+      "colors": ["Natural", "Negro", "Blanco"],
+      "rating": 4.5,
+      "reviews": 128,
+      "isNewArrival": true,
+      "onSale": false
     },
     {
       "id": "2",
       "name": "Lámpara Nórdica",
-      "description": "Lámpara de pie con diseño escandinavo",
+      "description": "Lámpara de pie con diseño escandinavo. Perfecta para crear ambientes acogedores.",
       "price": 149.99,
       "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
       "category": "2",
-      "stock": 15
+      "subCategory": "iluminacion",
+      "stock": 15,
+      "features": ["LED integrado", "Regulable", "Bajo consumo"],
+      "dimensions": {
+        "width": 30,
+        "height": 150,
+        "depth": 30
+      },
+      "colors": ["Negro", "Blanco", "Dorado"],
+      "rating": 4.8,
+      "reviews": 89,
+      "isNewArrival": false,
+      "onSale": true
     },
     {
       "id": "3",
       "name": "Jarrón Moderno",
-      "description": "Jarrón decorativo de cerámica en tonos neutros",
+      "description": "Jarrón decorativo de cerámica en tonos neutros, perfecto para cualquier espacio moderno.",
       "price": 79.99,
       "image": "https://images.unsplash.com/photo-1581783898377-1c85bf937427",
       "category": "3",
-      "stock": 20
+      "subCategory": "decoracion",
+      "stock": 20,
+      "features": ["Cerámica artesanal", "Resistente al agua", "Diseño único"],
+      "dimensions": {
+        "width": 20,
+        "height": 40,
+        "depth": 20
+      },
+      "colors": ["Beige", "Gris", "Terracota"],
+      "rating": 4.2,
+      "reviews": 45,
+      "isNewArrival": false,
+      "onSale": false
+    },
+    {
+      "id": "4",
+      "name": "Mesa de Centro Geométrica",
+      "description": "Mesa de centro con diseño geométrico y acabados en mármol y metal dorado.",
+      "price": 299.99,
+      "image": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88",
+      "category": "1",
+      "subCategory": "mesas",
+      "stock": 8,
+      "features": ["Mármol natural", "Estructura metálica", "Diseño geométrico"],
+      "dimensions": {
+        "width": 90,
+        "height": 45,
+        "depth": 90
+      },
+      "colors": ["Blanco/Dorado", "Negro/Negro"],
+      "rating": 4.7,
+      "reviews": 67,
+      "isNewArrival": true,
+      "onSale": false
+    },
+    {
+      "id": "5",
+      "name": "Sofá Modular",
+      "description": "Sofá modular contemporáneo con tapicería premium y múltiples configuraciones posibles.",
+      "price": 899.99,
+      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "category": "1",
+      "subCategory": "sofas",
+      "stock": 5,
+      "features": ["Modular", "Tapicería premium", "Espuma de alta densidad"],
+      "dimensions": {
+        "width": 280,
+        "height": 85,
+        "depth": 95
+      },
+      "colors": ["Gris", "Azul marino", "Verde sage"],
+      "rating": 4.9,
+      "reviews": 203,
+      "isNewArrival": true,
+      "onSale": true
     }
   ]
 }
