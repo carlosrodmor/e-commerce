@@ -114,7 +114,7 @@ const resetFilters = () => {
             :key="subCat"
             :value="subCat"
           >
-            {{ subCat }}
+            {{ subCat.charAt(0).toUpperCase() + subCat.slice(1).toLowerCase() }}
           </option>
         </select>
       </div>
@@ -216,27 +216,49 @@ const resetFilters = () => {
 
 <style scoped>
 .filters {
-  padding: 2rem;
+  position: sticky;
+  top: 6rem;
+  padding: 1.5rem;
   background: var(--bg-secondary);
   border-radius: 12px;
-  box-shadow: var(--shadow-sm);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  width: 280px;
+  margin-top: 1rem;
+}
+
+.filters::-webkit-scrollbar {
+  width: 4px;
+}
+
+.filters::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.filters::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 20px;
 }
 
 .filter-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: var(--text-xl);
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--text-primary);
 }
 
 h3 {
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -247,31 +269,45 @@ h3 {
 }
 
 .select-wrapper::after {
-  content: '▼';
+  content: '';
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-secondary);
+  width: 10px;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
   pointer-events: none;
-  font-size: 0.8rem;
+  opacity: 0.5;
 }
 
 select {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.625rem 2rem 0.625rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   appearance: none;
   cursor: pointer;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 select:hover {
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary-light);
+}
+
+select option {
+  padding: 0.5rem;
+}
+
+/* Añadir esta nueva regla para capitalizar las subcategorías */
+.filter-section:has(h3:contains('Subcategorías')) select option {
+  text-transform: capitalize;
 }
 
 .price-range {
@@ -287,44 +323,46 @@ select:hover {
 
 .currency {
   position: absolute;
-  left: 1rem;
+  left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-secondary);
+  font-size: 0.875rem;
 }
 
 .input-wrapper input {
   width: 100%;
-  padding: 0.75rem 1rem 0.75rem 2rem;
+  padding: 0.625rem 0.75rem 0.625rem 1.75rem;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-size: var(--text-sm);
-  transition: border-color 0.2s ease;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
 }
 
 .input-wrapper input:hover,
 .input-wrapper input:focus {
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary-light);
 }
 
 .separator {
-  width: 12px;
-  height: 2px;
+  width: 8px;
+  height: 1px;
   background: var(--color-border);
 }
 
 .checkbox-group {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.625rem;
 }
 
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.625rem;
   cursor: pointer;
   user-select: none;
 }
@@ -334,8 +372,8 @@ select:hover {
 }
 
 .checkbox-custom {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 2px solid var(--color-border);
   border-radius: 4px;
   position: relative;
@@ -348,23 +386,26 @@ select:hover {
 }
 
 .checkbox input:checked + .checkbox-custom::after {
-  content: '✓';
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 12px;
+  width: 10px;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .checkbox span:last-child {
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   color: var(--text-primary);
 }
 
 .reset-button {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.625rem;
   background: transparent;
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
@@ -375,21 +416,22 @@ select:hover {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
+  margin-top: 1rem;
 }
 
 .reset-button:hover {
-  background: var(--color-primary);
-  color: white;
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
   .filters {
-    padding: 1.5rem;
-  }
-
-  .filter-section {
-    margin-bottom: 1.5rem;
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 </style>
