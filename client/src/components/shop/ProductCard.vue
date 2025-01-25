@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { Product } from '@/interfaces/Product'
 
 interface Props {
@@ -6,6 +7,17 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+const imageLoaded = ref(false)
+const imageError = ref(false)
+
+const handleImageLoad = () => {
+  imageLoaded.value = true
+}
+
+const handleImageError = () => {
+  imageError.value = true
+}
 
 const formatPrice = (price: number) => {
   return new Intl.NumberFormat('es-ES', {
@@ -17,10 +29,30 @@ const formatPrice = (price: number) => {
 
 <template>
   <div class="product-card">
-    <div class="product-image">
-      <img :src="product.image" :alt="product.name" />
-      <span v-if="product.onSale" class="sale-badge">Oferta</span>
-      <span v-if="product.isNewArrival" class="new-badge">Nuevo</span>
+    <div class="image-container">
+      <!-- Placeholder mientras carga -->
+      <div v-show="!imageLoaded" class="image-placeholder"></div>
+
+      <!-- Imagen con lazy loading -->
+      <img
+        :src="product.image"
+        :alt="product.name"
+        loading="lazy"
+        @load="handleImageLoad"
+        @error="handleImageError"
+        :class="{ 'image-loaded': imageLoaded }"
+      />
+
+      <!-- Badges -->
+      <div class="badges">
+        <span v-if="product.onSale" class="badge sale">Oferta</span>
+        <span v-if="product.isNewArrival" class="badge new">Nuevo</span>
+      </div>
+
+      <!-- Fallback si hay error -->
+      <div v-if="imageError" class="image-error">
+        <i class="fas fa-image"></i>
+      </div>
     </div>
 
     <div class="product-info">
@@ -63,37 +95,58 @@ const formatPrice = (price: number) => {
   box-shadow: var(--shadow-lg);
 }
 
-.product-image {
+.image-container {
   position: relative;
+  width: 100%;
   aspect-ratio: 1;
+  background: var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.product-image img {
+.image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-border) 0%,
+    var(--color-border-hover) 50%,
+    var(--color-border) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.sale-badge,
-.new-badge {
+img.image-loaded {
+  opacity: 1;
+}
+
+.image-error {
   position: absolute;
-  top: 1rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  font-size: var(--text-xs);
-  font-weight: var(--font-medium);
-}
-
-.sale-badge {
-  right: 1rem;
-  background: var(--color-error);
-  color: white;
-}
-
-.new-badge {
-  left: 1rem;
-  background: var(--color-primary);
-  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-border);
+  color: var(--color-text);
+  font-size: 2rem;
 }
 
 .product-info {
@@ -163,5 +216,30 @@ const formatPrice = (price: number) => {
 .add-to-cart:disabled {
   background: var(--color-gray-400);
   cursor: not-allowed;
+}
+
+.badges {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  color: white;
+}
+
+.badge.sale {
+  background: var(--color-error);
+}
+
+.badge.new {
+  background: var(--color-primary);
 }
 </style>

@@ -86,8 +86,10 @@ const features = [
       </div>
     </section>
 
-    <CategorySection />
-    <ProductSection />
+    <div class="content-container">
+      <CategorySection />
+      <ProductSection />
+    </div>
 
     <!-- Nueva sección de newsletter -->
     <section class="newsletter">
@@ -437,5 +439,11 @@ h2::after {
   .newsletter-form button {
     width: 100%;
   }
+}
+
+.content-container {
+  min-height: 100vh; /* Altura mínima para evitar saltos bruscos */
+  position: relative;
+  contain: content; /* Mejora el rendimiento de scroll */
 }
 </style>

@@ -33,29 +33,40 @@ const limit = ref(12)
 const fetchData = async () => {
   try {
     loading.value = true
-    const [productsData, categoriesData] = await Promise.all([
-      productService.getProducts({
-        category: selectedCategory.value,
-        subCategory: selectedSubCategory.value,
-        minPrice: priceRange.value.min,
-        maxPrice: priceRange.value.max,
-        inStock: showInStock.value,
-        isNewArrival: showNewArrivals.value,
-        onSale: showOnSale.value,
-        search: searchQuery.value,
-        sortBy: sortBy.value,
-        page: currentPage.value,
-        limit: limit.value,
-      }),
-      categoryService.getCategories(),
-    ])
+    error.value = null
+    console.log('Fetching data with filters:', {
+      category: selectedCategory.value,
+      subCategory: selectedSubCategory.value,
+      minPrice: priceRange.value.min,
+      maxPrice: priceRange.value.max,
+      inStock: showInStock.value,
+      isNewArrival: showNewArrivals.value,
+      onSale: showOnSale.value,
+      sortBy: sortBy.value,
+      page: currentPage.value,
+      limit: limit.value,
+    })
 
-    products.value = productsData.products
-    totalPages.value = productsData.pagination.totalPages
-    categories.value = categoriesData
+    const response = await productService.getProducts({
+      category: selectedCategory.value,
+      subCategory: selectedSubCategory.value,
+      minPrice: priceRange.value.min,
+      maxPrice: priceRange.value.max,
+      inStock: showInStock.value,
+      isNewArrival: showNewArrivals.value,
+      onSale: showOnSale.value,
+      sortBy: sortBy.value,
+      page: currentPage.value,
+      limit: limit.value,
+    })
+
+    console.log('Received products:', response)
+    products.value = response.products
+    totalPages.value = response.pagination.totalPages
+    categories.value = await categoryService.getCategories()
   } catch (e) {
-    error.value = 'Error al cargar los datos'
-    console.error(e)
+    console.error('Error fetching products:', e)
+    error.value = 'Error al cargar los productos'
   } finally {
     loading.value = false
   }
@@ -110,34 +121,34 @@ onMounted(() => {
 
 <template>
   <div class="shop-container">
-    <SearchBar v-model="searchQuery" />
-
     <div class="shop-layout">
       <ShopFilters
-        :categories="categories"
-        v-model:selectedCategory="selectedCategory"
-        v-model:selectedSubCategory="selectedSubCategory"
+        v-model:category="selectedCategory"
+        v-model:subCategory="selectedSubCategory"
         v-model:priceRange="priceRange"
         v-model:showInStock="showInStock"
         v-model:showNewArrivals="showNewArrivals"
         v-model:showOnSale="showOnSale"
         v-model:sortBy="sortBy"
-        @reset="resetFilters"
       />
 
-      <ProductGrid :products="products" :loading="loading" :error="error" />
-    </div>
+      <div class="shop-content">
+        <SearchBar v-model="searchQuery" />
 
-    <!-- Paginación -->
-    <div class="pagination" v-if="totalPages > 1">
-      <button
-        v-for="page in totalPages"
-        :key="page"
-        :class="{ active: page === currentPage }"
-        @click="changePage(page)"
-      >
-        {{ page }}
-      </button>
+        <ProductGrid :products="products" :loading="loading" :error="error" />
+
+        <!-- Paginación -->
+        <div v-if="totalPages > 1" class="pagination">
+          <button
+            v-for="page in totalPages"
+            :key="page"
+            :class="{ active: page === currentPage }"
+            @click="changePage(page)"
+          >
+            {{ page }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>

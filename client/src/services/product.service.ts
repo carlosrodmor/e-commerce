@@ -1,5 +1,6 @@
 import { api } from './api'
 import type { Product } from '@/interfaces/Product'
+import { CacheService } from './cache.service'
 
 interface FilterOptions {
   category?: string
@@ -25,36 +26,55 @@ interface ProductsResponse {
   }
 }
 
+const cache = CacheService.getInstance()
+
 export const productService = {
   async getProducts(filters: FilterOptions = {}): Promise<ProductsResponse> {
-    const queryParams = new URLSearchParams()
+    try {
+      const queryString = new URLSearchParams(filters as Record<string, string>).toString()
+      const cacheKey = `products:${queryString}`
 
-    // Convertir y validar los filtros antes de añadirlos
-    Object.entries(filters).forEach(([key, value]) => {
-      if (value !== undefined && value !== '' && value !== null) {
-        // Convertir booleanos a strings
-        if (typeof value === 'boolean') {
-          queryParams.append(key, value.toString())
-        } else {
-          queryParams.append(key, value.toString())
-        }
+      // Intentar obtener del caché
+      const cachedData = cache.get<ProductsResponse>(cacheKey)
+      if (cachedData) {
+        console.log('Returning cached data:', cachedData)
+        return cachedData
       }
-    })
 
-    console.log('Request URL:', `http://localhost:5000/api/products?${queryParams.toString()}`)
+      console.log('Fetching products with query:', queryString)
+      const response = await fetch(`http://localhost:5000/api/products?${queryString}`)
+      if (!response.ok) {
+        throw new Error('Error al obtener los productos')
+      }
+      const data = await response.json()
 
-    const response = await fetch(`http://localhost:5000/api/products?${queryParams.toString()}`)
-    if (!response.ok) {
-      throw new Error('Error al obtener los productos')
+      console.log('Response data:', data)
+      // Guardar en caché
+      cache.set(cacheKey, data.data)
+      return data.data
+    } catch (error) {
+      console.error('Error in getProducts:', error)
+      throw error
     }
-    const data = await response.json()
-
-    console.log('Response data:', data)
-    return data.data
   },
 
   async getProductById(id: string) {
     const response = await api.get(`/products/${id}`)
     return response.data as Product
+  },
+
+  async getFeaturedProducts(): Promise<Product[]> {
+    try {
+      const response = await fetch('http://localhost:5000/api/products/featured')
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.message || 'Error al obtener los productos destacados')
+      }
+      const data = await response.json()
+      return data.data
+    } catch (error) {
+      console.error('Error fetching featured products:', error)
+      throw error
+    }
   },
 }

@@ -15,8 +15,23 @@ interface FilterQuery {
   limit?: number
 }
 
+// Función auxiliar para generar URLs de imágenes optimizadas
+const getOptimizedImageUrl = (
+  originalUrl: string,
+  options: { width?: number; quality?: number } = {}
+) => {
+  const { width = 800, quality = 80 } = options
+
+  if (originalUrl.includes('unsplash.com')) {
+    // Añadir dimensiones predefinidas para evitar CLS (Cumulative Layout Shift)
+    return `${originalUrl}?w=${width}&q=${quality}&auto=format&fit=crop`
+  }
+  return originalUrl
+}
+
 export const getProducts = async (req: Request, res: Response) => {
   try {
+    console.log('Received query params:', req.query)
     const {
       category,
       subCategory,
@@ -66,14 +81,17 @@ export const getProducts = async (req: Request, res: Response) => {
     }
 
     if (parsedInStock) {
+      console.log('Filtering by stock > 0')
       filteredProducts = filteredProducts.filter(product => product.stock > 0)
     }
 
     if (parsedIsNewArrival) {
+      console.log('Filtering by new arrivals')
       filteredProducts = filteredProducts.filter(product => product.isNewArrival)
     }
 
     if (parsedOnSale) {
+      console.log('Filtering by on sale')
       filteredProducts = filteredProducts.filter(product => product.onSale)
     }
 
@@ -108,15 +126,36 @@ export const getProducts = async (req: Request, res: Response) => {
     // Obtener productos de la página actual
     const paginatedProducts = filteredProducts.slice(startIndex, endIndex)
 
+    // Optimizar URLs de imágenes antes de enviar
+    const optimizedProducts = paginatedProducts.map(product => ({
+      ...product,
+      image: getOptimizedImageUrl(product.image, { width: 800, quality: 80 }),
+      thumbnail: getOptimizedImageUrl(product.image, { width: 200, quality: 60 })
+    }))
+
     // Añadir logs para debug
     console.log('Query params:', req.query)
     console.log('Filtered products length:', filteredProducts.length)
     console.log('Paginated products length:', paginatedProducts.length)
 
+    // Antes de enviar la respuesta
+    console.log('Filtered products:', {
+      total: filteredProducts.length,
+      filters: {
+        inStock: parsedInStock,
+        isNewArrival: parsedIsNewArrival,
+        onSale: parsedOnSale,
+        category,
+        subCategory,
+        minPrice: parsedMinPrice,
+        maxPrice: parsedMaxPrice
+      }
+    })
+
     res.json({
       status: 'success',
       data: {
-        products: paginatedProducts,
+        products: optimizedProducts,
         pagination: {
           total,
           totalPages,
@@ -163,5 +202,58 @@ export const createProduct = async (req: Request, res: Response) => {
     res.status(501).json({ message: 'No implementado aún' })
   } catch (error) {
     res.status(500).json({ message: 'Error en el servidor' })
+  }
+}
+
+export const getFeaturedProducts = async (req: Request, res: Response) => {
+  try {
+    // Mejorar el algoritmo para productos destacados
+    let featuredProducts = productsData.products.filter(product => {
+      const hasHighRating = product.rating >= 4.0
+      const hasGoodReviews = product.reviews >= 100
+      const isAvailable = product.stock > 0
+      const isPromoted = product.isNewArrival || product.onSale
+
+      return hasHighRating && hasGoodReviews && isAvailable && isPromoted
+    })
+
+    // Mejorar el sistema de puntuación
+    featuredProducts.sort((a, b) => {
+      const getScore = (p: (typeof productsData.products)[0]) => {
+        const ratingScore = p.rating * 2
+        const reviewScore = Math.log10(p.reviews) * 1.5
+        const newArrivalBonus = p.isNewArrival ? 1 : 0
+        const saleBonus = p.onSale ? 0.5 : 0
+        return ratingScore + reviewScore + newArrivalBonus + saleBonus
+      }
+
+      return getScore(b) - getScore(a)
+    })
+
+    // Asegurar variedad de categorías
+    const maxPerCategory = 3
+    const productsByCategory = new Map<string, number>()
+
+    featuredProducts = featuredProducts
+      .filter(product => {
+        const count = productsByCategory.get(product.category) || 0
+        if (count < maxPerCategory) {
+          productsByCategory.set(product.category, count + 1)
+          return true
+        }
+        return false
+      })
+      .slice(0, 8)
+
+    res.json({
+      status: 'success',
+      data: featuredProducts
+    })
+  } catch (error) {
+    console.error('Error in getFeaturedProducts:', error)
+    res.status(500).json({
+      status: 'error',
+      message: 'Error al obtener los productos destacados'
+    })
   }
 }

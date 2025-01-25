@@ -8,8 +8,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
-      meta: { public: true },
+      component: () => import('@/views/HomeView.vue'),
+      children: [
+        {
+          path: '',
+          components: {
+            hero: () => import('@/components/home/HeroSection.vue'),
+            categories: () => import('@/components/home/CategorySection.vue'),
+            products: () => import('@/components/home/ProductSection.vue'),
+          },
+        },
+      ],
     },
     {
       path: '/login',
@@ -38,7 +47,7 @@ const router = createRouter({
     {
       path: '/shop',
       name: 'shop',
-      component: () => import('../views/ShopView.vue'),
+      component: () => import('@/views/ShopView.vue'),
       meta: { public: true },
     },
     {

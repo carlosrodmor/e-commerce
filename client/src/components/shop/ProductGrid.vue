@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { Product } from '@/interfaces/Product'
 import ProductCard from './ProductCard.vue'
-import { watch } from 'vue'
 
 interface Props {
   products: Product[]
@@ -12,13 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 // Log para debug
-watch(
-  () => props.products,
-  (newProducts) => {
-    console.log('Products in grid:', newProducts)
-  },
-  { immediate: true },
-)
+console.log('Products received:', props.products)
 </script>
 
 <template>
@@ -32,7 +26,9 @@ watch(
     </div>
 
     <div v-else class="products">
-      <ProductCard v-for="product in products" :key="product.id" :product="product" />
+      <TransitionGroup name="product-fade">
+        <ProductCard v-for="product in products" :key="product.id" :product="product" />
+      </TransitionGroup>
     </div>
   </main>
 </template>
@@ -59,6 +55,17 @@ watch(
 
 .error {
   color: var(--color-error);
+}
+
+.product-fade-enter-active,
+.product-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.product-fade-enter-from,
+.product-fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 @media (max-width: 768px) {

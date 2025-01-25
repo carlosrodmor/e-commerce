@@ -1,174 +1,214 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { useIntersectionObserver } from '@vueuse/core'
 import type { Category } from '@/interfaces/Category'
 import { categoryService } from '@/services/category.service'
 
+const router = useRouter()
 const categories = ref<Category[]>([])
 const loading = ref(true)
 const error = ref<string | null>(null)
+const sectionRef = ref<HTMLElement | null>(null)
+const isVisible = ref(false)
 
-const fetchCategories = async () => {
+const categoryImages = {
+  Muebles: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80',
+  Iluminación: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80',
+  Decoración: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500&q=80',
+  Cocina: 'https://images.unsplash.com/photo-1603199506016-b9a594b593c0?w=500&q=80',
+  Baño: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=500&q=80',
+}
+
+const navigateToCategory = (categoryId: string) => {
+  router.push({
+    name: 'shop',
+    query: { category: categoryId },
+  })
+}
+
+const loadCategories = async () => {
   try {
+    loading.value = true
     categories.value = await categoryService.getCategories()
   } catch (e) {
     error.value = 'Error al cargar las categorías'
-    console.error(e)
   } finally {
     loading.value = false
   }
 }
 
-const handleImageError = (event: Event) => {
-  const img = event.target as HTMLImageElement
-  img.src = '/placeholder-image.jpg' // Imagen de respaldo
-}
-
-onMounted(() => {
-  fetchCategories()
+// Usar intersection observer para carga lazy
+useIntersectionObserver(sectionRef, ([{ isIntersecting }]) => {
+  if (isIntersecting && !isVisible.value) {
+    isVisible.value = true
+    loadCategories()
+  }
 })
 </script>
 
 <template>
-  <section class="categories">
-    <h2>Categorías Destacadas</h2>
+  <section ref="sectionRef" class="categories-section">
+    <h2 class="section-title">Nuestras Categorías</h2>
 
-    <div v-if="loading" class="loading">Cargando categorías...</div>
-
-    <div v-else-if="error" class="error">
-      {{ error }}
-    </div>
-
-    <div v-else class="category-grid">
-      <div class="category-card" v-for="category in categories" :key="category.id">
-        <img :src="category.image" :alt="category.name" @error="handleImageError" />
-        <div class="category-content">
-          <h3>{{ category.name }}</h3>
-          <p>{{ category.description }}</p>
+    <div v-if="loading && isVisible" class="categories-grid">
+      <div v-for="n in 5" :key="n" class="category-skeleton">
+        <div class="image-skeleton"></div>
+        <div class="content-skeleton">
+          <div class="title-skeleton"></div>
+          <div class="subtitle-skeleton"></div>
         </div>
       </div>
+    </div>
+
+    <div v-else-if="error" class="error">{{ error }}</div>
+
+    <div v-else-if="isVisible" class="categories-grid">
+      <TransitionGroup name="category-fade">
+        <div
+          v-for="category in categories"
+          :key="category.id"
+          class="category-card"
+          @click="navigateToCategory(category.id)"
+        >
+          <div class="category-image">
+            <img
+              :src="categoryImages[category.name as keyof typeof categoryImages]"
+              :alt="category.name"
+              loading="lazy"
+            />
+          </div>
+          <h3>{{ category.name }}</h3>
+          <p>{{ category.subCategories.length }} subcategorías</p>
+        </div>
+      </TransitionGroup>
     </div>
   </section>
 </template>
 
 <style scoped>
-.categories {
-  padding: 6rem 2rem;
-  max-width: 1300px;
+.categories-section {
+  padding: 4rem 2rem;
+  min-height: 400px; /* Altura mínima para evitar saltos */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 2.5rem;
-  color: var(--color-heading);
-  position: relative;
-  padding-bottom: 1rem;
+/* Skeleton styles */
+.category-skeleton {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px;
 }
 
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--color-primary);
-  border-radius: 2px;
+.image-skeleton {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    90deg,
+    var(--color-border) 0%,
+    var(--color-border-hover) 50%,
+    var(--color-border) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  margin-top: 2rem;
+.content-skeleton {
+  padding: 1rem;
+}
+
+.title-skeleton {
+  height: 24px;
+  width: 70%;
+  background: var(--color-border);
+  margin-bottom: 0.5rem;
+  animation: shimmer 1.5s infinite;
+}
+
+.subtitle-skeleton {
+  height: 16px;
+  width: 40%;
+  background: var(--color-border);
+  animation: shimmer 1.5s infinite;
+}
+
+/* Animations */
+.category-fade-enter-active,
+.category-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.category-fade-enter-from,
+.category-fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .category-card {
-  position: relative;
+  background: var(--bg-secondary);
+  border-radius: 8px;
   overflow: hidden;
-  border-radius: 16px;
-  transition: all 0.4s ease;
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 16/9;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .category-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
 }
 
-.category-card img {
+.category-image {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.category-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.category-card:hover img {
-  transform: scale(1.05);
-}
-
-.category-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 30px;
 }
 
 .category-card h3 {
-  color: var(--color-white);
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  margin: 0;
+  font-size: var(--text-lg);
+  color: var(--text-primary);
 }
 
 .category-card p {
-  color: var(--color-white);
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 0 1rem 1rem;
   margin: 0;
-}
-
-@media (max-width: 768px) {
-  .categories {
-    padding: 4rem 1rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .category-card h3 {
-    font-size: 1.6rem;
-  }
-
-  .category-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
+  color: var(--text-secondary);
 }
 
 .loading,
 .error {
   text-align: center;
   padding: 2rem;
-  font-size: 1.2rem;
   color: var(--text-secondary);
 }
 

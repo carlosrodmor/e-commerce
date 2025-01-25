@@ -2,24 +2,42 @@
 import { ref, onMounted } from 'vue'
 import type { Product } from '@/interfaces/Product'
 import { productService } from '@/services/product.service'
+import ProductCard from '@/components/shop/ProductCard.vue'
+import ProductSkeleton from '@/components/shop/ProductSkeleton.vue'
+import { useIntersectionObserver } from '@vueuse/core'
 
 const products = ref<Product[]>([])
 const loading = ref(true)
 const error = ref<string | null>(null)
+const retryCount = ref(0)
+const maxRetries = 3
+const sectionRef = ref<HTMLElement | null>(null)
+const isVisible = ref(false)
 
-const fetchProducts = async () => {
+const loadProducts = async () => {
   try {
-    products.value = await productService.getProducts()
+    loading.value = true
+    error.value = null
+    products.value = await productService.getFeaturedProducts()
   } catch (e) {
-    error.value = 'Error al cargar los productos'
-    console.error(e)
+    if (retryCount.value < maxRetries) {
+      retryCount.value++
+      setTimeout(loadProducts, 1000 * retryCount.value)
+    } else {
+      error.value = 'Error al cargar los productos destacados'
+    }
   } finally {
     loading.value = false
   }
 }
 
-onMounted(() => {
-  fetchProducts()
+// Solo cargar los productos cuando la sección sea visible
+const { stop } = useIntersectionObserver(sectionRef, ([{ isIntersecting }]) => {
+  if (isIntersecting && !isVisible.value) {
+    isVisible.value = true
+    loadProducts()
+    stop()
+  }
 })
 
 const formatPrice = (price: number) => {
@@ -31,160 +49,82 @@ const formatPrice = (price: number) => {
 </script>
 
 <template>
-  <section class="featured-products">
-    <h2>Productos Destacados</h2>
+  <section ref="sectionRef" class="featured-products">
+    <h2 class="section-title">Productos Destacados</h2>
 
-    <div v-if="loading" class="loading">Cargando productos...</div>
+    <div v-if="loading" class="products-grid">
+      <ProductSkeleton v-for="n in 8" :key="n" />
+    </div>
 
     <div v-else-if="error" class="error">
       {{ error }}
+      <button @click="loadProducts" class="retry-button">Reintentar</button>
     </div>
 
-    <div v-else class="product-grid">
-      <div class="product-card" v-for="product in products" :key="product.id">
-        <img :src="product.image" :alt="product.name" />
-        <h3>{{ product.name }}</h3>
-        <p class="description">{{ product.description }}</p>
-        <p class="price">{{ formatPrice(product.price) }}</p>
-        <p class="stock" v-if="product.stock > 0">Stock: {{ product.stock }} unidades</p>
-        <p class="stock out" v-else>Sin stock</p>
-        <button class="add-to-cart" :disabled="product.stock === 0">
-          {{ product.stock > 0 ? 'Añadir al Carrito' : 'Agotado' }}
-        </button>
-      </div>
+    <div v-else class="products-grid">
+      <TransitionGroup name="product-fade">
+        <ProductCard v-for="product in products" :key="product.id" :product="product" />
+      </TransitionGroup>
     </div>
   </section>
 </template>
 
 <style scoped>
 .featured-products {
-  padding: 6rem 2rem;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 2.5rem;
-  color: var(--color-heading);
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--color-primary);
-  border-radius: 2px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-}
-
-.product-card {
-  padding: 1.5rem;
+  padding: 4rem 2rem;
   background: var(--bg-secondary);
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-md);
 }
 
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
 }
 
-.product-card img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-}
-
-.product-card h3 {
-  font-size: 1.3rem;
-  color: var(--color-heading);
-  margin: 1rem 0;
-  font-weight: 600;
-}
-
-.description {
-  color: var(--color-text);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-.price {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 1.5rem;
-}
-
-.stock {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-}
-
-.stock.out {
-  color: var(--color-error);
-}
-
-.add-to-cart {
-  width: 100%;
-  padding: 1rem;
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  font-size: 1.1rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.add-to-cart:hover {
-  background: var(--color-primary-light);
-  opacity: 1;
-}
-
-.add-to-cart:disabled {
-  background: var(--color-gray-400);
-  cursor: not-allowed;
-}
-
-@media (max-width: 768px) {
-  .featured-products {
-    padding: 4rem 1rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .loading,
 .error {
   text-align: center;
   padding: 2rem;
-  font-size: 1.2rem;
   color: var(--text-secondary);
 }
 
 .error {
   color: var(--color-error);
+}
+
+.retry-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-fade-enter-active,
+.product-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.product-fade-enter-from,
+.product-fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
 }
 </style>
